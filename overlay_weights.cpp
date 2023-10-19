@@ -1,10 +1,3 @@
-#include <iostream>
-#include <vector>
-
-#include "TFile.h"
-#include "TTreeReader.h"
-
-
 using namespace std;
 
 void overlay_weights() {
