@@ -137,7 +137,7 @@ void Overlay() {
                                 for (Int_t Gamma = 0; Gamma < stop; Gamma++) {
                                     ((_ == Cycle) && (Cycle > 0)) ? readers_gamma_jets[0] -> SetEntry((rand() % entries_gamma_jets)) : readers_gamma_jets[0] -> SetEntry(Gamma);
 
-                                     bool action, end;
+                                     
                                      while(true){
                                           Int_t z = rand() % entries_zj;
                                           readers_znunu[0] -> SetEntry(z);
@@ -206,8 +206,8 @@ void Overlay() {
                                           Double_t dphi_met_jet_lead=abs((*metTST).DeltaPhi(*jet_lead));
 
                                           bool ZSelection = ((metTST_pt <= 130) && (dphi_met_gamma <= 0.6) && (dphi_met_jet_lead <= 0.3 && n_jet == 1));
-                                          // bool action;
-                                          // bool end;
+                                          int action;
+                                          bool end;
                                           (ZSelection==false) ? action=1 : action=0;
 
                                           switch(action)
